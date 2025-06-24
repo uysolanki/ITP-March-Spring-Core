@@ -26,7 +26,57 @@
      <property name="engineCC">
      	<value>2400</value>
      </property>
-     
-    
      </bean>
+     
+      <bean id="g1" class="com.itp.model.Gear">
+    	<constructor-arg value="Tata"></constructor-arg>
+    	<constructor-arg value="7"></constructor-arg>
+    	<constructor-arg value="Manual"></constructor-arg>
+    </bean>
+   
+    <bean id="g2" class="com.itp.model.Gear">
+    
+    <property name="gearMfgName">
+    	<value>Tesla</value>
+    </property>
+    
+    <property name="gearLever">
+    	<value>8</value>
+    </property>
+    
+    <property name="gearType">
+    	<value>Automatic</value>
+    </property>
+    </bean>
+  
+     <bean id="c1" class="com.itp.model.Car">
+    	<constructor-arg value="City"></constructor-arg>
+    	<constructor-arg value="Honda"></constructor-arg>
+    	<constructor-arg value="White"></constructor-arg>
+    	<constructor-arg value="100.0"></constructor-arg>
+    	<constructor-arg ref="e1"></constructor-arg>
+    	<constructor-arg ref="g1"></constructor-arg>
+    </bean>
+    
+   
+    <bean id="c2" class="com.itp.model.Car">
+    	<property name="carModelName">
+    		<value>Innova</value>
+    	</property>
+    	
+    	<property name="carMfgName">
+    		<value>Toyota</value>
+    	</property>
+    	
+    	<property name="carColor">
+    		<value>Black</value>
+    	</property>
+    	
+    	<property name="carPrice">
+    		<value>200.0</value>
+    	</property>
+    	
+    	<property name="engine" ref="e2"></property>
+    	<property name="gear" ref="g2"></property>
+    </bean>
 </beans>
