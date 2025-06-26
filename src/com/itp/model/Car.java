@@ -20,7 +20,6 @@ public class Car {
 		this.gear = gear;
 	}
 	
-	
 	@Override
 	public String toString() {
 		return "Car [carModelName=" + carModelName + ", carMfgName=" + carMfgName + ", carColor=" + carColor

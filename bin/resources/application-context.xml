@@ -79,4 +79,19 @@
     	<property name="engine" ref="e2"></property>
     	<property name="gear" ref="g2"></property>
     </bean>
+    
+   
+    <bean id="cust1" class="com.itp.model.Customer" scope="prototype">
+    <property name="custId">
+    		<value>18</value>
+    	</property>
+    	
+    	<property name="custName">
+    		<value>Virat</value>
+    	</property>
+    	
+    	<property name="custAge">
+    		<value>35</value>
+    	</property>
+    </bean>
 </beans>
