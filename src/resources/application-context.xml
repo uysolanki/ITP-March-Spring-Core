@@ -7,13 +7,13 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <bean id="e1" class="com.itp.model.Engine">
+    <bean id="engine" class="com.itp.model.Engine">
     	<constructor-arg value="Honda"></constructor-arg>
     	<constructor-arg value="12"></constructor-arg>
     	<constructor-arg value="1200"></constructor-arg>
     </bean>
    
-     <bean id="e2" class="com.itp.model.Engine">
+     <bean id="e2" class="com.itp.model.Engine" >  <!-- autowire-candidate="false" -->
      
       <property name="engineLiter">
      	<value>24</value>
@@ -28,13 +28,13 @@
      </property>
      </bean>
      
-      <bean id="g1" class="com.itp.model.Gear">
+      <bean id="gear" class="com.itp.model.Gear">
     	<constructor-arg value="Tata"></constructor-arg>
     	<constructor-arg value="7"></constructor-arg>
     	<constructor-arg value="Manual"></constructor-arg>
     </bean>
    
-    <bean id="g2" class="com.itp.model.Gear">
+    <bean id="g2" class="com.itp.model.Gear" >
     
     <property name="gearMfgName">
     	<value>Tesla</value>
@@ -54,12 +54,12 @@
     	<constructor-arg value="Honda"></constructor-arg>
     	<constructor-arg value="White"></constructor-arg>
     	<constructor-arg value="100.0"></constructor-arg>
-    	<constructor-arg ref="e1"></constructor-arg>
-    	<constructor-arg ref="g1"></constructor-arg>
+    	<constructor-arg ref="e2"></constructor-arg>
+    	<constructor-arg ref="g2"></constructor-arg>
     </bean>
     
    
-    <bean id="c2" class="com.itp.model.Car">
+    <bean id="c2" class="com.itp.model.Car" autowire="byName">
     	<property name="carModelName">
     		<value>Innova</value>
     	</property>
@@ -76,8 +76,8 @@
     		<value>200.0</value>
     	</property>
     	
-    	<property name="engine" ref="e2"></property>
-    	<property name="gear" ref="g2"></property>
+       <!--  <property name="engine" ref="e2"></property>
+    	<property name="gear" ref="g2"></property> -->
     </bean>
     
    

@@ -7,8 +7,8 @@ public class Car {
 	private String carColor;
 	private double carPrice;
 	
-	private Engine engine;
-	private Gear gear;
+	private Engine engine;  //Dependency  com.itp.model.Engine
+	private Gear gear;      //Dependency  com.itp.model.Gear
 	
 	public Car() {}
 	public Car(String carModelName, String carMfgName, String carColor, double carPrice, Engine engine, Gear gear) {
@@ -63,6 +63,9 @@ public class Car {
 	}
 	
 	
-	
+	public void startCar()
+	{
+		engine.startEngine();
+	}
 
 }

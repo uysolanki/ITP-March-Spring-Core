@@ -14,5 +14,6 @@ public class DriverApp {
 		
 		Car car2=beanFactory.getBean("c2",Car.class);
 		System.out.println(car2);
+		car2.startCar();
 	}
 }
