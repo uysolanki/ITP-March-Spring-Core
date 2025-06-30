@@ -7,6 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
+    <context:annotation-config />
+    
     <bean id="engine" class="com.itp.model.Engine">
     	<constructor-arg value="Honda"></constructor-arg>
     	<constructor-arg value="12"></constructor-arg>
@@ -92,6 +94,24 @@
     	
     	<property name="custAge">
     		<value>35</value>
+    	</property>
+    </bean>
+    
+    <bean id="p1" class="com.itp.model.Player" scope="singleton" > <!-- init-method="aaa" destroy-method="zzz" -->
+    	<property name="jno">
+    		<value>18</value>
+    	</property>
+    	
+    	<property name="pname">
+    		<value>Virat</value>
+    	</property>
+    	
+    	<property name="mp">
+    		<value>100</value>
+    	</property>
+    	
+    	<property name="rs">
+    		<value>5000</value>
     	</property>
     </bean>
 </beans>
