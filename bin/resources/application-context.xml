@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xmlns:context="http://www.springframework.org/schema/context"
@@ -15,7 +15,7 @@
     	<constructor-arg value="1200"></constructor-arg>
     </bean>
    
-     <bean id="e2" class="com.itp.model.Engine" >  <!-- autowire-candidate="false" -->
+     <bean id="e2" class="com.itp.model.Engine" >  autowire-candidate="false"
      
       <property name="engineLiter">
      	<value>24</value>
@@ -78,8 +78,8 @@
     		<value>200.0</value>
     	</property>
     	
-       <!--  <property name="engine" ref="e2"></property>
-    	<property name="gear" ref="g2"></property> -->
+        <property name="engine" ref="e2"></property>
+    	<property name="gear" ref="g2"></property>
     </bean>
     
    
@@ -97,7 +97,7 @@
     	</property>
     </bean>
     
-    <bean id="p1" class="com.itp.model.Player" scope="singleton" > <!-- init-method="aaa" destroy-method="zzz" -->
+    <bean id="p1" class="com.itp.model.Player" scope="singleton" > init-method="aaa" destroy-method="zzz"
     	<property name="jno">
     		<value>18</value>
     	</property>
@@ -115,3 +115,4 @@
     	</property>
     </bean>
 </beans>
+ -->

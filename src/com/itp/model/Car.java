@@ -1,5 +1,8 @@
 package com.itp.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 public class Car {
 	
 	private String carModelName;
@@ -7,7 +10,10 @@ public class Car {
 	private String carColor;
 	private double carPrice;
 	
+	@Autowired
+	@Qualifier("engy1")
 	private Engine engine;  //Dependency  com.itp.model.Engine
+	@Autowired
 	private Gear gear;      //Dependency  com.itp.model.Gear
 	
 	public Car() {}
